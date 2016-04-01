@@ -5,3 +5,4 @@ require 'platform-api'
 heroku = PlatformAPI.connect(ENV.fetch("HEROKU_API_KEY"))
 
 heroku.dyno.create(ENV['APP'], { command: 'bundle exec bin/forkbak', attach: false })
+

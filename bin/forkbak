@@ -91,6 +91,11 @@ module Forkbak
   end
 
   def self.destroy_databases
+    # check for the convention of -backups in the app name to avoid running
+    # this on just any app set in this variable which is easy to confuse with
+    # the target app to backup
+    backup_app = ENV.fetch('APP')
+    return unless backup_app.include?('-backups')
     heroku.addon.list(ENV.fetch('APP')).select do |addon|
       addon['addon_service']['name'] == 'heroku-postgresql'
     end.each do |addon|
