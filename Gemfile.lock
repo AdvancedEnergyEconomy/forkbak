@@ -4,7 +4,7 @@ GEM
     domain_name (0.5.24)
       unf (>= 0.0.5, < 1.0.0)
     erubis (2.7.0)
-    excon (0.45.3)
+    excon (0.76.0)
     heroics (0.0.14)
       erubis (~> 2.7.0)
       excon
