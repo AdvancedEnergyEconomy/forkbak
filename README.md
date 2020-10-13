@@ -1,3 +1,5 @@
+# Important note - this app is no longer in use as of Oct 2020
+
 Forkbak
 =======
 
